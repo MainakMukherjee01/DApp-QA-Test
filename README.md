@@ -1,5 +1,6 @@
 Steps to run:
     In root folder: (Sequentially)
+        
         Step 1: Terminal 1: 
             1. `npm i` - Install all required Dependencies
             2. `npm run node:local` - Clean, Compile, Test, Check Coverage and Launch local Blockchain.
