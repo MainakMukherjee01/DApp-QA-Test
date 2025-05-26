@@ -1,0 +1,54 @@
+{
+	"name": "web3-testing-demo",
+	"version": "1.0.0",
+	"description": "A minimal web3 application demonstrating testing with Hardhat and eth-tester",
+	"main": "index.js",
+	"scripts": {
+		"clean": "rm -rf coverage/ && rm -rf coverage.json && rm -rf frontend/deployment.json && rm -rf cache/ && npx hardhat clean",
+		"compile": "npx hardhat compile",
+		"test:unit": "npx hardhat test",
+		"test:coverage": "npx hardhat coverage",
+		"test:gas": "REPORT_GAS=true npm run test:unit",
+		"test": "npm run size && npm run test:gas && npm run test:coverage",
+		"size": "npx hardhat size-contracts",
+		"deploy:hardhat": "hardhat run scripts/deploy.js --network hardhat",
+		"deploy:local": "hardhat run scripts/deploy.js --network localhost",
+		"interact": "hardhat run scripts/interact.js --network localhost",
+		"node:local": "npm run clean && npm run compile && npm run test && hardhat node",
+		"start": "npm run deploy:local && npm run interact && python -m http.server 8080 --b 127.0.0.1 --directory frontend"
+	},
+	"keywords": [
+		"web3",
+		"testing",
+		"hardhat",
+		"ethereum",
+		"solidity"
+	],
+	"author": "Web3 Testing Demo",
+	"license": "MIT",
+	"devDependencies": {
+		"@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+		"@nomicfoundation/hardhat-ethers": "^3.0.0",
+		"@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+		"@nomicfoundation/hardhat-toolbox": ">=5.0.0",
+		"@nomicfoundation/hardhat-verify": ">=2.0.13",
+		"@typechain/ethers-v6": "^0.5.1",
+		"@typechain/hardhat": "^9.1.0",
+		"@types/chai": ">=4.0.0",
+		"@types/mocha": ">=9.1.0",
+		"chai": ">=4.0.0",
+		"dotenv": "^16.5.0",
+		"ethers": "^6.4.0",
+		"hardhat": "^2.17.1",
+		"hardhat-contract-sizer": "^2.10.0",
+		"hardhat-gas-reporter": ">=1.0.0",
+		"npm-run-all": "^4.1.5",
+		"solidity-coverage": "^0.8.1",
+		"typechain": "^8.3.0",
+		"typescript": ">=4.5.0"
+	},
+	"dependencies": {
+		"dotenv": "^16.5.0",
+		"npm-run-all": "^4.1.5"
+	}
+}

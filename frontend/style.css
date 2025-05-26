@@ -1,0 +1,80 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #121212;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+}
+
+.container {
+	width: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #1e1e1e;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+.card {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+input[type="number"],
+input[type="text"] {
+	padding: 10px;
+	width: 60%;
+	border-radius: 5px;
+	border: none;
+	margin-right: 10px;
+	background: #222;
+	color: #fff;
+}
+
+button {
+	padding: 10px 15px;
+	background-color: #00bcd4;
+	border: none;
+	border-radius: 5px;
+	color: #000;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.2s;
+}
+
+button:hover {
+	background-color: #0097a7;
+}
+
+#storageInfo {
+	margin-top: 20px;
+	background: #222;
+	border-radius: 8px;
+	padding: 15px;
+	color: #fff;
+	font-size: 1rem;
+	text-align: left;
+	word-break: break-all;
+}
+
+#walletAddress {
+	font-size: 0.95rem;
+	color: #00bcd4;
+	margin-bottom: 10px;
+	word-break: break-all;
+}
+
+#storedValue {
+	font-size: 1.1rem;
+	color: #ffd600;
+	margin: 0;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleStorage DApp</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Storage DApp</h1>
+
+        <button id="connectBtn">Connect Wallet</button>
+        <p id="walletAddress"></p>
+
+        <div class="card">
+            <input type="number" id="inputValue" placeholder="Enter a number" />
+            <button id="setBtn">Set Value</button>
+        </div>
+
+        <div class="card">
+            <button id="getBtn">Get Stored Value</button>
+            <p id="storedValue">Stored Value: -</p>
+        </div>
+
+        <div class="card">
+            <button id="incrementBtn">Increment</button>
+            <button id="decrementBtn">Decrement</button>
+        </div>
+
+        <div class="card">
+            <input type="number" id="addValueInput" placeholder="Add value" />
+            <button id="addValueBtn">Add Value</button>
+        </div>
+
+        <div class="card">
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div class="card">
+            <input type="text" id="newOwnerInput" placeholder="New owner address" />
+            <button id="transferOwnerBtn">Transfer Ownership</button>
+        </div>
+
+        <div class="card" id="storageInfo">
+            <!-- Storage info will be populated here -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
